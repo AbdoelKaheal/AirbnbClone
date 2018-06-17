@@ -3,6 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 import AdvancedButton from '../AdvancedButton/AdvancedButton';
 import WelcomeText from '../WelcomeText/WelcomeText';
 import TextButton from '../TextButton/TextButton';
+import Contract from '../Contract/Contract';
 class Body extends Component {
 	render() {
 		return (
@@ -22,7 +23,9 @@ class Body extends Component {
 					/>
 					<AdvancedButton text="Create Account" />
 				</View>
+
 				<TextButton text="More Options" />
+				<Contract />
 			</View>
 		);
 	}
@@ -31,7 +34,7 @@ class Body extends Component {
 const styles = StyleSheet.create({
 	container: {
 		padding: 25,
-		height: 400,
+		height: 500,
 		justifyContent: 'space-around',
 	},
 	img: {
