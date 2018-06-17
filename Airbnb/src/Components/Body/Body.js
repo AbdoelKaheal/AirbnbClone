@@ -5,6 +5,11 @@ import WelcomeText from '../WelcomeText/WelcomeText';
 import TextButton from '../TextButton/TextButton';
 import Contract from '../Contract/Contract';
 class Body extends Component {
+	moreOptionsHandler = () => {
+		this.props.navigator.showModal({
+			screen: 'Airbnb.MoreOptions',
+		});
+	};
 	render() {
 		return (
 			<View style={styles.container}>
@@ -24,7 +29,7 @@ class Body extends Component {
 					<AdvancedButton text="Create Account" />
 				</View>
 
-				<TextButton text="More Options" />
+				<TextButton text="More Options" onPress={this.moreOptionsHandler} />
 				<Contract />
 			</View>
 		);

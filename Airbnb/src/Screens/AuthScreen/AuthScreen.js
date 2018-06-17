@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, StatusBar } from 'react-native';
 import GradientWrapper from '../../Components/GradientWrapper/GradientWrapper';
 import Header from '../../Components/Header/Header';
 import Body from '../../Components/Body/Body';
 class Auth extends Component {
+	componentWillMount() {
+		StatusBar.setBarStyle('light-content');
+	}
 	static navigatorStyle = {
 		navBarHidden: true,
 	};
@@ -12,7 +15,7 @@ class Auth extends Component {
 			<GradientWrapper>
 				<Header />
 				<ScrollView contentContainerStyle={styles.wrapper}>
-					<Body />
+					<Body navigator={this.props.navigator} />
 				</ScrollView>
 			</GradientWrapper>
 		);
