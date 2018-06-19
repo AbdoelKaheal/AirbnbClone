@@ -1,13 +1,14 @@
-<h1>Progress Log 🕐</h1>
+# Progress Log
 
-<h3>Day 1</h3>
-<img src='./Screenshots/Day1.png'/>
+### Day 1
 
-<h3>Day 2</h3>
-<div>
-    <img src='./Screenshots/Day2-1.png'/>
-    <img src='./Screenshots/Day2-2.png'/>
-</div>
+!["Day 1 IMG"](./Screenshots/Day1.png)
 
-<h3>Day 3</h3>
-<img src='./Screenshots/Day3.png'/>
+### Day 2
+
+!["Day 2 IMG-1"](./Screenshots/Day2-1.png)
+!["Day 2 IMG-2"](./Screenshots/Day2-2.png)
+
+### Day 3
+
+!["Day 3 IMG"](./Screenshots/Day3.png)
