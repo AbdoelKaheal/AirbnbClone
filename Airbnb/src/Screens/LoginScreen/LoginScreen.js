@@ -6,16 +6,27 @@ import {
 	StyleSheet,
 	TouchableOpacity,
 	TextInput,
+	KeyboardAvoidingView,
 } from 'react-native';
 import GradientWrapper from '../../Components/GradientWrapper/GradientWrapper';
 import TextButton from '../../Components/TextButton/TextButton';
 import Icon from 'react-native-vector-icons/Ionicons';
+import AdvancedButton from '../../Components/AdvancedButton/AdvancedButton';
+
+const IconButton = props => (
+	<TouchableOpacity onPress={props.onPress} style={props.style}>
+		<Icon {...props} style={[{}, props.iconStyle]} />
+	</TouchableOpacity>
+);
 
 const NavBar = props => (
 	<View style={styles.NavBarContainer}>
-		<TouchableOpacity onPress={props.handlePopToMainScreen}>
-			<Icon name="ios-arrow-back" size={25} color="white" />
-		</TouchableOpacity>
+		<IconButton
+			onPress={props.handlePopToMainScreen}
+			name="ios-arrow-back"
+			size={25}
+			color="white"
+		/>
 		<TextButton
 			text="Forget Password?"
 			buttonTextStyle={styles.NavBarButtonText}
@@ -79,6 +90,35 @@ class LoginScreen extends Component {
 					<Text style={styles.loginBoldText}>Login</Text>
 					<Form />
 				</ScrollView>
+				<KeyboardAvoidingView
+					behavior="padding"
+					style={{
+						width: '100%',
+						justifyContent: 'space-between',
+						flexDirection: 'row',
+						alignItems: 'center',
+						paddingVertical: '10%',
+						paddingHorizontal: '5%',
+					}}
+				>
+					<AdvancedButton
+						text="Log in without password"
+						style={{ width: '60%', height: 40 }}
+					/>
+					<IconButton
+						name="ios-arrow-forward"
+						size={32}
+						color="rgb(88,170,174)"
+						style={{
+							height: 55,
+							width: 55,
+							backgroundColor: 'rgb(192,221,222)',
+							alignItems: 'center',
+							justifyContent: 'center',
+							borderRadius: 50,
+						}}
+					/>
+				</KeyboardAvoidingView>
 			</GradientWrapper>
 		);
 	}
